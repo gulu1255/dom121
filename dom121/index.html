@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Hind+Madurai:wght@500&family=Monomaniac+One&family=Montserrat:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background: linear-gradient(#e66465, #9198e5);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 97.7vh;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 95vh;
+        }
+        .color{
+            border: 1px solid ;
+            width: 100px;
+            height:330px ;
+            padding: 30px;
+            background-color: rgb(226, 43, 43);
+            border-radius: 10px;
+            
+            
+        }
+        #a{
+          
+            background-color: rgb(128, 128, 128);
+            margin-bottom: 20px;
+            border-radius: 100px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid;
+            color: black;
+            font-family: 'Monomaniac One', sans-serif;
+        }
+        #b{
+            border: 1px solid;
+            background-color:gray;
+            margin-bottom: 20px;
+            border-radius: 100px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid;
+            color: black;
+            font-family: 'Monomaniac One', sans-serif;
+        }
+        #b{
+            border: 3px solid;
+            background-color:gray;
+            margin-bottom: 20px;
+            border-radius: 100px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Monomaniac One', sans-serif;
+            
+        }
+        #c{
+            border: 3px solid;
+            background-color:gray;
+            border-radius: 100px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Monomaniac One', sans-serif;
+            
+        }
+        #c{
+            border: 3px solid;
+            background-color:gray;
+            border-radius: 100px;
+            padding: 25px;
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Monomaniac One', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 id="text" style="text-align: center; ">gulu</h1> -->
+    <div class="main">
+        <div class="color">
+            <div id="a">30</div>
+            <div id="b">3</div>
+            <div id="c">30</div>
+        </div>
+    </div>
+   
+
+    <script>
+            // let html = document.documentElement
+            // console.log(html)
+            
+        // DOM - Document Object Model 
+        // BOM - Browser Object Model
+        // DOM 12 - түрү бар ошонун 4 түрүн иштейбиз document,tag,atr,text
+        // node - түйүн узел  
+        // DOM дерево  
+
+        // let html = document.documentElement
+
+        // console.log(html.childNodes)
+        // console.log(html.lastElementChild)
+        // console.log(html.firstElementChild)
+
+        // Sibling - бир туугандар
+
+        // console.log(document.head.nextElementSibling)
+        // console.log(document.body.previousElementSibling)
+
+        // console.log(document.body.previousElementSibling)
+
+
+        // let text = document.getElementById('text')
+        // setTimeout(()=>{
+        //     text.innerText = "Beishebaev"
+        //     text.style.color = 'blue'
+        //     text.style.fontSize ="50px"
+        //     text.style.transform = 'rotate(360deg)'
+        //     text.style.transition = '1s'
+        //     text.style.boxShadow = '0px 0px 10px 10px blue'
+        // },1000)
+
+        let red = document.getElementById('a')
+        let yellow = document.getElementById('b')
+        let green = document.getElementById('c')
+        
+        function time(){
+        let count = 30
+        let count1 = 4
+        let count3 = 6
+        let count2 =30
+        let count4 =30
+
+        red.style.boxShadow='0px 0px 30px 25px red'
+            red.style.backgroundColor='red'
+            red.style.color='black'
+            yellow.style.color='gray'
+            green.style.color='gray'
+        function timeOut (){
+            red.innerHTML=count
+            count--
+           
+        }
+        function timeOut1 (){
+            yellow.innerHTML=count1
+            count1--
+            count1 + 6
+           
+        }
+        function timeOut2 (){
+            green.innerHTML=count2
+            count2--
+           
+        }
+        function timeOut3 (){
+            yellow.innerHTML=count3
+            count3--
+           
+        }
+        function timeOut4 (){
+            red.innerHTML=count4
+            count4--
+           
+        }
+            let timer = setInterval(() => {
+                    timeOut()
+                    red.style.backgroundColor='red'
+                    red.style.boxShadow='0px 0px 30px 25px red'
+                    red.style.transition='1s'
+
+                    if(count==-1){
+                        clearInterval(timer)
+                        red.style.color='gray'
+                        red.style.boxShadow='0px 0px 0px 0px red'
+                        yellow.style.color='black'
+                        yellow.style.boxShadow='0px 0px 30px 25px yellow'
+                        yellow.style.backgroundColor='yellow'
+                        red.style.backgroundColor='gray'
+                        yellow.style.transition='1s'
+                        let timer1 = setInterval(() => {
+                            timeOut1()
+                            if(count1==-1){
+                                yellow.style.boxShadow='0px 0px 0px 0px yellow'
+                                yellow.style.backgroundColor='gray'
+                                yellow.style.color='gray'
+                                green.style.boxShadow='0px 0px 30px 25px green'
+                                green.style.backgroundColor='green'
+                                green.style.color='black'
+                                green.style.transition='1s'
+                                clearInterval(timer1)
+                                let timer2 = setInterval(() => {
+            
+                                    timeOut2()
+                                    if(count2==-1){
+                                        green.style.boxShadow='0px 0px 0px 0px green'
+                                        green.style.color='gray'
+                                        green.style.backgroundColor='gray'
+                                        green.style.transition='1s'
+                                     
+                                            
+                                        clearInterval(timer2)
+                                       time()    
+                                    }
+                                }, 1000);
+                            }
+                        }, 1000);
+                        timeOut1()
+                    }
+                }, 1000)
+        timeOut()
+        timeOut1()
+        timeOut2()
+        timeOut3()
+       
+
+        }
+        time()
+        
+    </script>
+    
+</body>
+</html>
